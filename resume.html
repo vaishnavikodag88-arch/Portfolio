@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi Kodag - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #faf8ff;
+            padding: 40px;
+            color: #1f2937;
+        }
+
+        .resume {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.10);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #7C3AED, #F59E0B);
+            color: white;
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .header .subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        .header .tagline {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== SECTION ===== */
+        .section {
+            padding: 22px 30px;
+            border-bottom: 1px solid #f3f0ff;
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: #7C3AED;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid #7C3AED;
+            display: inline-block;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section p {
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+            line-height: 1.9;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .info {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: #7C3AED;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(124, 58, 237, 0.08);
+            color: #7C3AED;
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .badge-gold {
+            background: rgba(245, 158, 11, 0.1);
+            color: #F59E0B;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 25px 30px;
+            background: #faf8ff;
+        }
+
+        .footer h2 {
+            color: #7C3AED;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid #7C3AED;
+            display: inline-block;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer p {
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 25px;
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 1.05rem;
+        }
+
+        .signature span {
+            color: #7C3AED;
+        }
+
+        .date-place {
+            margin-top: 15px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .date-place p {
+            font-weight: 500;
+        }
+
+        .date-place p strong {
+            color: #1f2937;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 28px;
+            background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .header .subtitle {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 15px 20px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+
+            .date-place {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .signature {
+                text-align: left;
+                margin-top: 15px;
+            }
+
+            .back-btn {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .back-btn {
+                display: none;
+            }
+
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <!-- ===== HEADER ===== -->
+        <div class="header">
+            <h1>Vaishnavi Kodag</h1>
+            <div class="subtitle">Diploma in Computer Engineering</div>
+            <div class="tagline">"Discipline, confidence, and perseverance — the pillars of my journey"</div>
+        </div>
+
+        <!-- ===== CAREER OBJECTIVE ===== -->
+        <div class="section">
+            <h2>Career Objective</h2>
+            <p>
+                To excel in the technical field by continuously enhancing my knowledge and skills in computer technology. I aim to build a successful and impactful career through innovation, dedication, and hard work while contributing effectively to organizational growth.
+            </p>
+        </div>
+
+        <!-- ===== PERSONAL INFORMATION ===== -->
+        <div class="section">
+            <h2>Personal Information</h2>
+            <ul class="info">
+                <li><span class="highlight">Name:</span> Vaishnavi Vaibhav Kodag</li>
+                <li><span class="highlight">Date of Birth:</span> 13/12/2008</li>
+                <li><span class="highlight">Email:</span> vaishnavikodag88@gmail.com</li>
+                <li><span class="highlight">Phone:</span> +91 8956952688</li>
+                <li><span class="highlight">Address:</span> Sangola, Maharashtra, India</li>
+            </ul>
+        </div>
+
+        <!-- ===== EDUCATIONAL QUALIFICATIONS ===== -->
+        <div class="section">
+            <h2>Educational Qualifications</h2>
+            <ul>
+                <li><span class="highlight">Institute:</span> Shivaji Polytechnic College, Sangola</li>
+                <li><span class="highlight">University:</span> MSBTE</li>
+                <li><span class="highlight">Course:</span> Diploma in Computer Engineering</li>
+                <li><span class="highlight">Year of Study:</span> Third Year <span class="badge badge-gold">🎯 Currently Pursuing</span></li>
+                <li><span class="highlight">10th Percentage:</span> 91% <span class="badge">🏆 Distinction</span></li>
+                <li><span class="highlight">First Year Percentage:</span> 90.47% <span class="badge">🏆 Distinction</span></li>
+                <li><span class="highlight">Second Year Percentage:</span> 87.41% <span class="badge">🏆 Distinction</span></li>
+            </ul>
+        </div>
+
+        <!-- ===== TECHNICAL SKILLS ===== -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><span class="highlight">Programming Languages:</span> C, C++, Java, Python</li>
+                <li><span class="highlight">Web Development:</span> HTML, CSS, JavaScript, Bootstrap</li>
+                <li><span class="highlight">Database Management:</span> MySQL, DBMS</li>
+                <li><span class="highlight">Operating Systems:</span> Windows</li>
+                <li><span class="highlight">Other Skills:</span> Problem Solving, Analytical Thinking</li>
+            </ul>
+        </div>
+
+        <!-- ===== ACADEMIC PROJECTS ===== -->
+        <div class="section">
+            <h2>Academic Projects</h2>
+            <ul>
+                <li><span class="highlight">Calculator App:</span> Built using JavaScript, HTML, and CSS with responsive design</li>
+                <li><span class="highlight">Login Form:</span> Created using Bootstrap 5 with form validation</li>
+                <li><span class="highlight">Personal Portfolio:</span> Fully responsive portfolio website built from scratch</li>
+                <li><span class="highlight">Bank Management System:</span> Using Java and MySQL</li>
+            </ul>
+        </div>
+
+        <!-- ===== ACHIEVEMENTS & ACTIVITIES ===== -->
+        <div class="section">
+            <h2>Achievements & Activities</h2>
+            <ul>
+                <li><span class="highlight">🥋 Karate Black Belt:</span> Certified with distinction, demonstrating discipline and perseverance</li>
+                <li><span class="highlight">💻 C Programming Workshop:</span> Successfully completed with certification</li>
+                <li><span class="highlight">🐍 Python Workshop:</span> Successfully completed with certification</li>
+                <li><span class="highlight">🏆 First Class with Distinction:</span> Secured in First Year of Diploma</li>
+                <li><span class="highlight">🎤 State Level Ellocution:</span> Participated in State Level Elocution Competition</li>
+                <li><span class="highlight">🤝 NSS Program:</span> Actively participated in NSS activities</li>
+            </ul>
+        </div>
+
+        <!-- ===== DECLARATION ===== -->
+        <div class="footer">
+            <h2>Declaration</h2>
+            <p>
+                I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.
+            </p>
+
+            <div class="date-place">
+                <p><strong>Date:</strong> 26/06/2024</p>
+                <p><strong>Place:</strong> Sangola</p>
+            </div>
+
+            <div class="signature">
+                Signature: <span>Vaishnavi Kodag</span>
+            </div>
+
+           <a href="portfolio1.html" class="back-btn">← Back to Portfolio
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
